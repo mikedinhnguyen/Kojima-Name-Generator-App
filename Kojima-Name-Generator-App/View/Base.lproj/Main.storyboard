@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuestionViewController" customModule="Kojima_Name_Generator_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPM-wl-FEl" userLabel="QuestionView">
+                                <rect key="frame" x="45" y="104" width="324" height="220"/>
+                                <subviews>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question goes here" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhM-Ow-zks">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="220"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="WhM-Ow-zks" firstAttribute="top" secondItem="yPM-wl-FEl" secondAttribute="top" id="Tzv-eb-Fpm"/>
+                                    <constraint firstAttribute="bottom" secondItem="WhM-Ow-zks" secondAttribute="bottom" id="gUZ-pC-STw"/>
+                                    <constraint firstAttribute="trailing" secondItem="WhM-Ow-zks" secondAttribute="trailing" id="u4E-ab-0nT"/>
+                                    <constraint firstItem="WhM-Ow-zks" firstAttribute="leading" secondItem="yPM-wl-FEl" secondAttribute="leading" id="zk7-Gf-49K"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLs-Bp-SG5" userLabel="AnswerView">
+                                <rect key="frame" x="70" y="414" width="274" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer goes here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OGd-z1-iSq">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="OGd-z1-iSq" firstAttribute="top" secondItem="DLs-Bp-SG5" secondAttribute="top" id="LFm-Ks-hG5"/>
+                                    <constraint firstAttribute="trailing" secondItem="OGd-z1-iSq" secondAttribute="trailing" id="eVg-6V-jsf"/>
+                                    <constraint firstAttribute="bottom" secondItem="OGd-z1-iSq" secondAttribute="bottom" id="iih-fX-64m"/>
+                                    <constraint firstItem="OGd-z1-iSq" firstAttribute="leading" secondItem="DLs-Bp-SG5" secondAttribute="leading" id="xnb-xA-CPg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJS-ry-FAu" userLabel="ButtonView">
+                                <rect key="frame" x="70" y="694" width="274" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPK-Hh-77S">
+                                        <rect key="frame" x="120" y="20" width="34" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" red="0.091909416019999995" green="0.21173426510000001" blue="0.22800827030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="checkmark.shield.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="continuePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EaD-N0-rNi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TPK-Hh-77S" secondAttribute="bottom" constant="20" id="Wmu-Nc-0q1"/>
+                                    <constraint firstItem="TPK-Hh-77S" firstAttribute="top" secondItem="kJS-ry-FAu" secondAttribute="top" constant="20" id="bEv-00-GiI"/>
+                                    <constraint firstItem="TPK-Hh-77S" firstAttribute="leading" secondItem="kJS-ry-FAu" secondAttribute="leading" constant="120" id="fEN-za-q7I"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPK-Hh-77S" secondAttribute="trailing" constant="120" id="fQi-Yr-kQN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kJS-ry-FAu" secondAttribute="trailing" constant="70" id="1MK-Mg-cao"/>
+                            <constraint firstItem="DLs-Bp-SG5" firstAttribute="top" secondItem="yPM-wl-FEl" secondAttribute="bottom" constant="90" id="1tY-Qv-2rk"/>
+                            <constraint firstItem="kJS-ry-FAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="4lM-Ob-CRG"/>
+                            <constraint firstItem="DLs-Bp-SG5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="FbR-5r-e1q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yPM-wl-FEl" secondAttribute="trailing" constant="45" id="G0I-nV-6Bc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kJS-ry-FAu" secondAttribute="bottom" constant="100" id="HAh-Ze-fBu"/>
+                            <constraint firstItem="kJS-ry-FAu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="650" id="OPP-68-cBT"/>
+                            <constraint firstItem="yPM-wl-FEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="OuG-85-P5k"/>
+                            <constraint firstItem="kJS-ry-FAu" firstAttribute="top" secondItem="DLs-Bp-SG5" secondAttribute="bottom" constant="210" id="VvS-9w-Nky"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLs-Bp-SG5" secondAttribute="trailing" constant="70" id="ePn-rE-h0N"/>
+                            <constraint firstItem="yPM-wl-FEl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="feb-bV-hno"/>
+                            <constraint firstItem="DLs-Bp-SG5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="kY7-3M-uJS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerField" destination="OGd-z1-iSq" id="req-JA-M7X"/>
+                        <outlet property="questionLabel" destination="WhM-Ow-zks" id="1kp-f1-kth"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.shield.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

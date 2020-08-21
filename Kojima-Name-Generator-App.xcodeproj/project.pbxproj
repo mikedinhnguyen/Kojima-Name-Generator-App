@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B4792B224EF12C700857092 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792B124EF12C700857092 /* AppDelegate.swift */; };
+		9B4792B424EF12C700857092 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792B324EF12C700857092 /* SceneDelegate.swift */; };
+		9B4792B624EF12C700857092 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792B524EF12C700857092 /* QuestionViewController.swift */; };
+		9B4792B924EF12C700857092 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792B724EF12C700857092 /* Main.storyboard */; };
+		9B4792BB24EF12CB00857092 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792BA24EF12CB00857092 /* Assets.xcassets */; };
+		9B4792BE24EF12CB00857092 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792BC24EF12CB00857092 /* LaunchScreen.storyboard */; };
+		9B4792C924EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792C824EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift */; };
+		9B4792D424EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792D324EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift */; };
+		9B4792E524EF1C0700857092 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792E424EF1C0700857092 /* Question.swift */; };
+		9B4792E724EF1C3D00857092 /* personalQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792E624EF1C3C00857092 /* personalQuestions.json */; };
+		9B4792E924EF1C4600857092 /* kojimaQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792E824EF1C4600857092 /* kojimaQuestions.json */; };
+		9B4792EC24EF1CD300857092 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792EB24EF1CD300857092 /* QuestionManager.swift */; };
+		9B4792EE24EF1E2100857092 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792ED24EF1E2100857092 /* Constants.swift */; };
+		9B6F1F0324EF844200AFCA33 /* NameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1F0224EF844200AFCA33 /* NameCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B4792C524EF12CB00857092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B4792A624EF12C700857092 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B4792AD24EF12C700857092;
+			remoteInfo = "Kojima-Name-Generator-App";
+		};
+		9B4792D024EF12CB00857092 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B4792A624EF12C700857092 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B4792AD24EF12C700857092;
+			remoteInfo = "Kojima-Name-Generator-App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B4792AE24EF12C700857092 /* Kojima-Name-Generator-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kojima-Name-Generator-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4792B124EF12C700857092 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9B4792B324EF12C700857092 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9B4792B524EF12C700857092 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		9B4792B824EF12C700857092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9B4792BA24EF12CB00857092 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B4792BD24EF12CB00857092 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9B4792BF24EF12CB00857092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4792C424EF12CB00857092 /* Kojima-Name-Generator-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kojima-Name-Generator-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4792C824EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kojima_Name_Generator_AppTests.swift; sourceTree = "<group>"; };
+		9B4792CA24EF12CB00857092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4792CF24EF12CB00857092 /* Kojima-Name-Generator-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kojima-Name-Generator-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4792D324EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kojima_Name_Generator_AppUITests.swift; sourceTree = "<group>"; };
+		9B4792D524EF12CB00857092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4792E424EF1C0700857092 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9B4792E624EF1C3C00857092 /* personalQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = personalQuestions.json; sourceTree = "<group>"; };
+		9B4792E824EF1C4600857092 /* kojimaQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kojimaQuestions.json; sourceTree = "<group>"; };
+		9B4792EB24EF1CD300857092 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		9B4792ED24EF1E2100857092 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9B6F1F0224EF844200AFCA33 /* NameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCalculator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B4792AB24EF12C700857092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792C124EF12CB00857092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792CC24EF12CB00857092 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B4792A524EF12C700857092 = {
+			isa = PBXGroup;
+			children = (
+				9B4792B024EF12C700857092 /* Kojima-Name-Generator-App */,
+				9B4792C724EF12CB00857092 /* Kojima-Name-Generator-AppTests */,
+				9B4792D224EF12CB00857092 /* Kojima-Name-Generator-AppUITests */,
+				9B4792AF24EF12C700857092 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B4792AF24EF12C700857092 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792AE24EF12C700857092 /* Kojima-Name-Generator-App.app */,
+				9B4792C424EF12CB00857092 /* Kojima-Name-Generator-AppTests.xctest */,
+				9B4792CF24EF12CB00857092 /* Kojima-Name-Generator-AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B4792B024EF12C700857092 /* Kojima-Name-Generator-App */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792B124EF12C700857092 /* AppDelegate.swift */,
+				9B4792B324EF12C700857092 /* SceneDelegate.swift */,
+				9B4792E224EF15A200857092 /* Model */,
+				9B4792E324EF15A800857092 /* View */,
+				9B4792E124EF12EC00857092 /* Controller */,
+				9B4792BA24EF12CB00857092 /* Assets.xcassets */,
+				9B4792EA24EF1C4C00857092 /* JSON */,
+				9B4792BC24EF12CB00857092 /* LaunchScreen.storyboard */,
+				9B4792BF24EF12CB00857092 /* Info.plist */,
+				9B4792ED24EF1E2100857092 /* Constants.swift */,
+			);
+			path = "Kojima-Name-Generator-App";
+			sourceTree = "<group>";
+		};
+		9B4792C724EF12CB00857092 /* Kojima-Name-Generator-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792C824EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift */,
+				9B4792CA24EF12CB00857092 /* Info.plist */,
+			);
+			path = "Kojima-Name-Generator-AppTests";
+			sourceTree = "<group>";
+		};
+		9B4792D224EF12CB00857092 /* Kojima-Name-Generator-AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792D324EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift */,
+				9B4792D524EF12CB00857092 /* Info.plist */,
+			);
+			path = "Kojima-Name-Generator-AppUITests";
+			sourceTree = "<group>";
+		};
+		9B4792E124EF12EC00857092 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792B524EF12C700857092 /* QuestionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9B4792E224EF15A200857092 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792E424EF1C0700857092 /* Question.swift */,
+				9B4792EB24EF1CD300857092 /* QuestionManager.swift */,
+				9B6F1F0224EF844200AFCA33 /* NameCalculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B4792E324EF15A800857092 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792B724EF12C700857092 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B4792EA24EF1C4C00857092 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9B4792E624EF1C3C00857092 /* personalQuestions.json */,
+				9B4792E824EF1C4600857092 /* kojimaQuestions.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B4792AD24EF12C700857092 /* Kojima-Name-Generator-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B4792D824EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-App" */;
+			buildPhases = (
+				9B4792AA24EF12C700857092 /* Sources */,
+				9B4792AB24EF12C700857092 /* Frameworks */,
+				9B4792AC24EF12C700857092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kojima-Name-Generator-App";
+			productName = "Kojima-Name-Generator-App";
+			productReference = 9B4792AE24EF12C700857092 /* Kojima-Name-Generator-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B4792C324EF12CB00857092 /* Kojima-Name-Generator-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B4792DB24EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-AppTests" */;
+			buildPhases = (
+				9B4792C024EF12CB00857092 /* Sources */,
+				9B4792C124EF12CB00857092 /* Frameworks */,
+				9B4792C224EF12CB00857092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B4792C624EF12CB00857092 /* PBXTargetDependency */,
+			);
+			name = "Kojima-Name-Generator-AppTests";
+			productName = "Kojima-Name-Generator-AppTests";
+			productReference = 9B4792C424EF12CB00857092 /* Kojima-Name-Generator-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9B4792CE24EF12CB00857092 /* Kojima-Name-Generator-AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B4792DE24EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-AppUITests" */;
+			buildPhases = (
+				9B4792CB24EF12CB00857092 /* Sources */,
+				9B4792CC24EF12CB00857092 /* Frameworks */,
+				9B4792CD24EF12CB00857092 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B4792D124EF12CB00857092 /* PBXTargetDependency */,
+			);
+			name = "Kojima-Name-Generator-AppUITests";
+			productName = "Kojima-Name-Generator-AppUITests";
+			productReference = 9B4792CF24EF12CB00857092 /* Kojima-Name-Generator-AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B4792A624EF12C700857092 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Mike Nguyen";
+				TargetAttributes = {
+					9B4792AD24EF12C700857092 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					9B4792C324EF12CB00857092 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9B4792AD24EF12C700857092;
+					};
+					9B4792CE24EF12CB00857092 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9B4792AD24EF12C700857092;
+					};
+				};
+			};
+			buildConfigurationList = 9B4792A924EF12C700857092 /* Build configuration list for PBXProject "Kojima-Name-Generator-App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B4792A524EF12C700857092;
+			productRefGroup = 9B4792AF24EF12C700857092 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B4792AD24EF12C700857092 /* Kojima-Name-Generator-App */,
+				9B4792C324EF12CB00857092 /* Kojima-Name-Generator-AppTests */,
+				9B4792CE24EF12CB00857092 /* Kojima-Name-Generator-AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B4792AC24EF12C700857092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4792BE24EF12CB00857092 /* LaunchScreen.storyboard in Resources */,
+				9B4792E724EF1C3D00857092 /* personalQuestions.json in Resources */,
+				9B4792E924EF1C4600857092 /* kojimaQuestions.json in Resources */,
+				9B4792BB24EF12CB00857092 /* Assets.xcassets in Resources */,
+				9B4792B924EF12C700857092 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792C224EF12CB00857092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792CD24EF12CB00857092 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B4792AA24EF12C700857092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B6F1F0324EF844200AFCA33 /* NameCalculator.swift in Sources */,
+				9B4792B624EF12C700857092 /* QuestionViewController.swift in Sources */,
+				9B4792E524EF1C0700857092 /* Question.swift in Sources */,
+				9B4792B224EF12C700857092 /* AppDelegate.swift in Sources */,
+				9B4792EC24EF1CD300857092 /* QuestionManager.swift in Sources */,
+				9B4792B424EF12C700857092 /* SceneDelegate.swift in Sources */,
+				9B4792EE24EF1E2100857092 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792C024EF12CB00857092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4792C924EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B4792CB24EF12CB00857092 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4792D424EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B4792C624EF12CB00857092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B4792AD24EF12C700857092 /* Kojima-Name-Generator-App */;
+			targetProxy = 9B4792C524EF12CB00857092 /* PBXContainerItemProxy */;
+		};
+		9B4792D124EF12CB00857092 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B4792AD24EF12C700857092 /* Kojima-Name-Generator-App */;
+			targetProxy = 9B4792D024EF12CB00857092 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B4792B724EF12C700857092 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B4792B824EF12C700857092 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9B4792BC24EF12CB00857092 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B4792BD24EF12CB00857092 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B4792D624EF12CB00857092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B4792D724EF12CB00857092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B4792D924EF12CB00857092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B4792DA24EF12CB00857092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B4792DC24EF12CB00857092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kojima-Name-Generator-App.app/Kojima-Name-Generator-App";
+			};
+			name = Debug;
+		};
+		9B4792DD24EF12CB00857092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kojima-Name-Generator-App.app/Kojima-Name-Generator-App";
+			};
+			name = Release;
+		};
+		9B4792DF24EF12CB00857092 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kojima-Name-Generator-App";
+			};
+			name = Debug;
+		};
+		9B4792E024EF12CB00857092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5H2PYS39DP;
+				INFOPLIST_FILE = "Kojima-Name-Generator-AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "mikedinhnguyen.Kojima-Name-Generator-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Kojima-Name-Generator-App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B4792A924EF12C700857092 /* Build configuration list for PBXProject "Kojima-Name-Generator-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4792D624EF12CB00857092 /* Debug */,
+				9B4792D724EF12CB00857092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B4792D824EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4792D924EF12CB00857092 /* Debug */,
+				9B4792DA24EF12CB00857092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B4792DB24EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4792DC24EF12CB00857092 /* Debug */,
+				9B4792DD24EF12CB00857092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B4792DE24EF12CB00857092 /* Build configuration list for PBXNativeTarget "Kojima-Name-Generator-AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4792DF24EF12CB00857092 /* Debug */,
+				9B4792E024EF12CB00857092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B4792A624EF12C700857092 /* Project object */;
+}
