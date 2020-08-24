@@ -16,11 +16,10 @@
 		9B4792C924EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792C824EF12CB00857092 /* Kojima_Name_Generator_AppTests.swift */; };
 		9B4792D424EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792D324EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift */; };
 		9B4792E524EF1C0700857092 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792E424EF1C0700857092 /* Question.swift */; };
-		9B4792E724EF1C3D00857092 /* personalQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792E624EF1C3C00857092 /* personalQuestions.json */; };
-		9B4792E924EF1C4600857092 /* kojimaQuestions.json in Resources */ = {isa = PBXBuildFile; fileRef = 9B4792E824EF1C4600857092 /* kojimaQuestions.json */; };
 		9B4792EC24EF1CD300857092 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792EB24EF1CD300857092 /* QuestionManager.swift */; };
 		9B4792EE24EF1E2100857092 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4792ED24EF1E2100857092 /* Constants.swift */; };
 		9B6F1F0324EF844200AFCA33 /* NameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F1F0224EF844200AFCA33 /* NameCalculator.swift */; };
+		9B9FA42C24F43D6300F865A4 /* MGS_Alert.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9B9FA42B24F43D6300F865A4 /* MGS_Alert.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +55,10 @@
 		9B4792D324EF12CB00857092 /* Kojima_Name_Generator_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kojima_Name_Generator_AppUITests.swift; sourceTree = "<group>"; };
 		9B4792D524EF12CB00857092 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B4792E424EF1C0700857092 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		9B4792E624EF1C3C00857092 /* personalQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = personalQuestions.json; sourceTree = "<group>"; };
-		9B4792E824EF1C4600857092 /* kojimaQuestions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kojimaQuestions.json; sourceTree = "<group>"; };
 		9B4792EB24EF1CD300857092 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		9B4792ED24EF1E2100857092 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9B6F1F0224EF844200AFCA33 /* NameCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCalculator.swift; sourceTree = "<group>"; };
+		9B9FA42B24F43D6300F865A4 /* MGS_Alert.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MGS_Alert.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +114,8 @@
 				9B4792E224EF15A200857092 /* Model */,
 				9B4792E324EF15A800857092 /* View */,
 				9B4792E124EF12EC00857092 /* Controller */,
+				9B9FA42624F43B9A00F865A4 /* Sounds */,
 				9B4792BA24EF12CB00857092 /* Assets.xcassets */,
-				9B4792EA24EF1C4C00857092 /* JSON */,
 				9B4792BC24EF12CB00857092 /* LaunchScreen.storyboard */,
 				9B4792BF24EF12CB00857092 /* Info.plist */,
 				9B4792ED24EF1E2100857092 /* Constants.swift */,
@@ -169,13 +167,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9B4792EA24EF1C4C00857092 /* JSON */ = {
+		9B9FA42624F43B9A00F865A4 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				9B4792E624EF1C3C00857092 /* personalQuestions.json */,
-				9B4792E824EF1C4600857092 /* kojimaQuestions.json */,
+				9B9FA42B24F43D6300F865A4 /* MGS_Alert.mp3 */,
 			);
-			path = JSON;
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4792BE24EF12CB00857092 /* LaunchScreen.storyboard in Resources */,
-				9B4792E724EF1C3D00857092 /* personalQuestions.json in Resources */,
-				9B4792E924EF1C4600857092 /* kojimaQuestions.json in Resources */,
+				9B9FA42C24F43D6300F865A4 /* MGS_Alert.mp3 in Resources */,
 				9B4792BB24EF12CB00857092 /* Assets.xcassets in Resources */,
 				9B4792B924EF12C700857092 /* Main.storyboard in Resources */,
 			);

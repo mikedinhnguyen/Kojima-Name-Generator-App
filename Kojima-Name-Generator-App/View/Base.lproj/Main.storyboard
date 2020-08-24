@@ -41,6 +41,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-lf-PLT">
+                                        <rect key="frame" x="-23" y="-73" width="320" height="216"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -93,6 +97,7 @@
                     </view>
                     <connections>
                         <outlet property="answerField" destination="OGd-z1-iSq" id="req-JA-M7X"/>
+                        <outlet property="pickerView" destination="mV3-lf-PLT" id="g8F-cC-tb8"/>
                         <outlet property="questionLabel" destination="WhM-Ow-zks" id="1kp-f1-kth"/>
                     </connections>
                 </viewController>

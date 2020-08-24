@@ -11,7 +11,7 @@ import Foundation
 struct QuestionManager {
     
     let questionairre = [
-        Question(question: "What is your full name?", type: "input"),
+        Question(question: "What is your full name?", type: "input"), // 0
         
         Question(question: "What do you do at your occupation?", type: "input"),
         
@@ -23,7 +23,7 @@ struct QuestionManager {
 
         Question(question:"What is something you are good at? (verb ending in '-ing')", type:"input"),
 
-        Question(question:"How many carrots do you believe you could eat in one sitting, if someone, like, forced you to eat as many carrots as possible?", type:"inputNum"),
+        Question(question:"How many carrots do you believe you could eat in one sitting, if someone, like, forced you to eat as many carrots as possible?", type:"input"), // 6
         
         Question(question:"What is your greatest intangible fear? (e.g. death, loneliness, fear itself)", type:"input"),
 
@@ -33,20 +33,20 @@ struct QuestionManager {
 
         Question(question:"What condition is your body currently in? (single word answer)", type:"input"),
 
-        Question(question:"Favorite state of matter?", type:"picker"),
+        Question(question:"Favorite state of matter?", type:"picker"), // 12
 
         Question(question:"A word your name kind of sounds like? (e.g. Jenny -> Penny)", type:"input"),
 
-        Question(question:"What is your Zodiac sign?", type:"picker"),
+        Question(question:"What is your Zodiac sign?", type:"picker"), // 14
 
         Question(question:"If you had to define your personality in one word, what would it be?", type:"input"),
         
-        Question(question:"Who is your favorite film character? (NOTE: must be played by Kurt Russell)", type:"picker"),
+        Question(question:"Who is your favorite film character? (NOTE: must be played by Kurt Russell)", type:"picker"), // 16
 
-        Question(question:"What is the last word of the title of your favorite Kubrick film?", type:"picker"
+        Question(question:"What is the last word of the title of your favorite Kubrick film?", type:"picker" // 17
         ),
 
-        Question(question:"What is the first word in the title of your favorite Joy Division album?", type:"picker"
+        Question(question:"What is the first word in the title of your favorite Joy Division album?", type:"picker" // 18
         ),
         
         Question(question:"What is a scientific term you picked up from listening to NPR once?", type:"input"
@@ -62,5 +62,12 @@ struct QuestionManager {
     
     func loadQuestion() -> String {
         return questionairre[index].question
+    }
+    
+    func isPicker() -> Bool {
+        if questionairre[index].type == K.type2 {
+            return true
+        }
+        return false
     }
 }

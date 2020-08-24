@@ -11,4 +11,7 @@ import Foundation
 struct K {
     static let personal = "personalQuestions"
     static let kojima = "kojimaQuestions"
+    static let type1 = "input"
+    static let type2 = "picker"
+    static let MGS = "MGS_Alert"
 }

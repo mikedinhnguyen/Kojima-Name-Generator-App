@@ -9,6 +9,13 @@
 import Foundation
 
 struct NameCalculator {
+    
+    let commands = [
+        "Press continue to 'roll the dice' to determine your -man condition.",
+        "Press continue to 'roll the dice' to determine your clone condition.",
+        "Press contine to 'roll the dice' to determine your condition condition."
+    ]
+    
     var answerIndex = 0
     var answers = [String]()
     
@@ -22,7 +29,7 @@ struct NameCalculator {
 //        let man = getManCondition()
 //        let clone = getCloneCondition()
 //        let condition = getConditionCondition()
-        return ""
+        return "\(answers[11]) \(answers[12])"
     }
     
     // MARK: - Condition Methods
@@ -73,7 +80,7 @@ struct NameCalculator {
         }
         else {
             //condition_condition_type = entry2_11;
-            print("You are how you currently are. You have the condition.")
+            print("You are how you currently are. You have the 'condition' condition.")
             // you have the \(condition_condition_type) condition
             return true
         }
