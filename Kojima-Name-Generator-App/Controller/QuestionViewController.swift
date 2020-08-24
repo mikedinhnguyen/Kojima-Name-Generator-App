@@ -50,18 +50,18 @@ class QuestionViewController: UIViewController {
     func nextQuestion() {
         if questionManager.index < questionManager.questionairre.count - 1 {
             questionManager.index += 1
-            if (!questionManager.isPicker()) {
+            if (!questionManager.isPicker()) { // text field
                 // change to text field
                 answerField.isHidden = false
                 // make picker disappear
                 pickerView.isHidden = true
+                
                 // reset answer field
                 answerField.text = ""
                 answerField.placeholder = "Answer goes here"
-            } else if (questionManager.isPicker()) {
+            } else if (questionManager.isPicker()) { // picker
                 // change to picker
                 pickerView.isHidden = false
-                
                 pickerView.reloadAllComponents()
                 
                 // make text field disappear
@@ -71,7 +71,7 @@ class QuestionViewController: UIViewController {
         }
         else {
             let result = nameCalculator.calculate()
-            questionLabel.text = "Your Kojima name is: \(result). Congrats."
+            questionLabel.text = "Your Kojima name is:\n \(result).\n Congrats."
             answerField.isHidden = true
             pickerView.isHidden = true
         }
@@ -87,6 +87,10 @@ class QuestionViewController: UIViewController {
     
     @IBAction func continuePressed(_ sender: UIButton) {
         if answerField.isHidden {
+            if pickerView.isHidden {
+                return
+            }
+            
             // check if 0
             if (pickerView.selectedRow(inComponent: 0) == 0) {
                 print("not possible")
@@ -144,7 +148,6 @@ extension QuestionViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         // how many rows to select from
-        print(pickerValues[pickerCount].count)
         return pickerValues[pickerCount].count
     }
 }
