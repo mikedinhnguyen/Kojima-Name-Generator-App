@@ -61,7 +61,7 @@
                                         <rect key="frame" x="120" y="20" width="34" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" red="0.091909416019999995" green="0.21173426510000001" blue="0.22800827030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="checkmark.shield.fill" catalog="system">
+                                        <state key="normal" image="checkmark.rectangle.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                         </state>
                                         <connections>
@@ -77,6 +77,29 @@
                                     <constraint firstAttribute="trailing" secondItem="TPK-Hh-77S" secondAttribute="trailing" constant="120" id="fQi-Yr-kQN"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-8G-1EG" userLabel="ProgressView">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wOm-YN-CKN">
+                                        <rect key="frame" x="50" y="50" width="314" height="1.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1.5" id="sTl-np-gCh"/>
+                                        </constraints>
+                                        <color key="progressTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MGS_snakebox" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-zl-lNU">
+                                        <rect key="frame" x="19" y="0.0" width="68" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="wOm-YN-CKN" firstAttribute="leading" secondItem="xdG-8G-1EG" secondAttribute="leading" constant="50" id="2pv-PP-atJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wOm-YN-CKN" secondAttribute="trailing" constant="50" id="Sqf-fO-zn8"/>
+                                    <constraint firstItem="wOm-YN-CKN" firstAttribute="top" secondItem="xdG-8G-1EG" secondAttribute="top" constant="50" id="hls-f0-pe6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -86,19 +109,25 @@
                             <constraint firstItem="DLs-Bp-SG5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="FbR-5r-e1q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yPM-wl-FEl" secondAttribute="trailing" constant="45" id="G0I-nV-6Bc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kJS-ry-FAu" secondAttribute="bottom" constant="100" id="HAh-Ze-fBu"/>
+                            <constraint firstItem="xdG-8G-1EG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NFV-aG-KHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xdG-8G-1EG" secondAttribute="trailing" id="OOR-QT-61a"/>
                             <constraint firstItem="kJS-ry-FAu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="650" id="OPP-68-cBT"/>
                             <constraint firstItem="yPM-wl-FEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="OuG-85-P5k"/>
+                            <constraint firstItem="xdG-8G-1EG" firstAttribute="top" secondItem="kJS-ry-FAu" secondAttribute="bottom" id="PWO-O3-tIh"/>
                             <constraint firstItem="kJS-ry-FAu" firstAttribute="top" secondItem="DLs-Bp-SG5" secondAttribute="bottom" constant="210" id="VvS-9w-Nky"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DLs-Bp-SG5" secondAttribute="trailing" constant="70" id="ePn-rE-h0N"/>
                             <constraint firstItem="yPM-wl-FEl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="feb-bV-hno"/>
                             <constraint firstItem="DLs-Bp-SG5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="kY7-3M-uJS"/>
+                            <constraint firstItem="xdG-8G-1EG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q4n-kO-ekT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="answerField" destination="OGd-z1-iSq" id="req-JA-M7X"/>
                         <outlet property="pickerView" destination="mV3-lf-PLT" id="g8F-cC-tb8"/>
+                        <outlet property="progressBar" destination="wOm-YN-CKN" id="q9e-48-R4r"/>
                         <outlet property="questionLabel" destination="WhM-Ow-zks" id="1kp-f1-kth"/>
+                        <outlet property="snakeBox" destination="uC4-zl-lNU" id="bcO-3S-F2A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -107,6 +136,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.shield.fill" catalog="system" width="128" height="121"/>
+        <image name="MGS_snakebox" width="489" height="283"/>
+        <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
     </resources>
 </document>
