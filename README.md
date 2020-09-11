@@ -10,4 +10,25 @@ This readme file should be updated over the course of time.
 
 ### Updates:  
 
-August 21, 2020: Very barebones prototype to display and take in user input. Still thinking about how to incorporate Kojima conditions and UIPickers into the equation.  
+8/21/2020:
+Very barebones prototype to display and take in user input. Still thinking about how to incorporate Kojima conditions and UIPickers into the equation.
+
+8/24/2020:
+incorporated UIPickerViews into app, incorporated sound for if there is no user input, started on NameCalculator, which will do most of name changing grunt work, deleted unnecessary JSON files, got full name generator working
+
+8/25/2020:
+implemented snake box progress bar, set character limit to 40, ability to reset questionnaire
+
+9/11/2020:
+added random button function, app icon, revamp name calc methods
+
+pending features:
+- 6 alternate names
+- installing typing mods?
+- UI/UX interface cleanup
+- main menu view controller
+    - Start
+    - About
+    - Donate
+- You are Hideo Kojima animation
+- if you try to ignore error messages 5 times, you “game over” for not listening and return to the beginning
