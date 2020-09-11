@@ -13,6 +13,7 @@ struct K {
     static let kojima = "kojimaQuestions"
     static let type1 = "input"
     static let type2 = "picker"
+    static let type3 = "command"
     static let MGS = "MGS_Alert"
     static let name1 = "NORMAL"
     static let name2 = "OCCUPATIONAL"

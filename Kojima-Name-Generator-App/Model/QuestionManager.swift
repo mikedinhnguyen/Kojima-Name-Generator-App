@@ -47,7 +47,7 @@ struct QuestionManager {
         Question(question:"Favorite state of matter?", type:"picker"),
         // 11, 2_12
 
-        Question(question:"A word your name kind of sounds like? (e.g. Jenny -> Penny)", type:"input"),
+        Question(question:"A word your name kind of sounds like? \n(e.g. Jenny -> Penny)", type:"input"),
         // 12, 2_13
 
         Question(question:"What is your Zodiac sign?", type:"picker"),
@@ -71,8 +71,20 @@ struct QuestionManager {
         Question(question:"What is a piece of military hardware you think looks cool even though war is bad?", type:"input"),
         // 19, 3_20
 
-        Question(question:"What is something you would enjoy watching Mads Mikkelsen do? Please condense into one word.", type:"input")
+        Question(question:"What is something you would enjoy watching Mads Mikkelsen do? Please condense into one word.", type:"input"),
         // 20, 3_21
+        
+        // ---
+        
+        Question(question: "Press the button to determine your -man condition.", type: "command"),
+        
+        Question(question: "Press the button to determine your clone condition.", type: "command"),
+        
+        Question(question: "Press the button to determine your condition condition.", type: "command"),
+        
+        Question(question: "Press the button to determine if you are Kojima.", type: "command"),
+        
+        Question(question: "Press the button to determine your name category.", type: "command")
     ]
 
     var index = 0
@@ -81,8 +93,22 @@ struct QuestionManager {
         return questionairre[index].question
     }
     
+    func isInput() -> Bool {
+        if questionairre[index].type == K.type1 {
+            return true
+        }
+        return false
+    }
+    
     func isPicker() -> Bool {
         if questionairre[index].type == K.type2 {
+            return true
+        }
+        return false
+    }
+    
+    func isCommand() -> Bool {
+        if questionairre[index].type == K.type3 {
             return true
         }
         return false

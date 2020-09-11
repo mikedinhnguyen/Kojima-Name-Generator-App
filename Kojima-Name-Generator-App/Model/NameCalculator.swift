@@ -11,6 +11,10 @@ import Foundation
 struct NameCalculator {
     
     init() {
+        man = false
+        clone = false
+        condition = false
+        kojima = false
         normal = false
         occupation = false
         horny = false
@@ -20,14 +24,9 @@ struct NameCalculator {
         subtext = false
     }
     
-    let commands = [
-        "Press button to 'roll the dice' to determine your -man condition.",
-        "Press button to 'roll the dice' to determine your clone condition.",
-        "Press button to 'roll the dice' to determine your condition condition."
-    ]
-    
     var answerIndex = 0
     var answers = [String]()
+    var man, clone, condition, kojima: Bool
     var normal, occupation, horny, the, cool, violent, subtext: Bool
     var condition_condition_type = ""
     var first_name = ""
@@ -40,13 +39,7 @@ struct NameCalculator {
     }
     
     mutating func calculate() -> String {
-        let man = getManCondition()
-        let _ = getCloneCondition()
-        let condition = getConditionCondition()
-        let kojima = getKojimaCondition()
         if (kojima) {return "Hideo Kojima"}
-        else {print("You are not Hideo Kojima")}
-        getNameCategory()
         if (normal) {return getNormalName(man, condition)}
         if (occupation) {return getOccupationName(man, condition)}
         if (horny) {return getHornyName(man, condition)}
@@ -60,73 +53,92 @@ struct NameCalculator {
     
     // MARK: - Condition Methods
     
-    func getManCondition() -> Bool {
-        //print(commands[0])
+    mutating func getManCondition() -> (String, Int) {
         
         let resultDice = Int.random(in: 1...4)
         if (resultDice < 4){
-            print("You do not have the -man condition.")
-            return false
+            let str = "You do not have the -man suffix."
+            print(str)
+            man = false
+            return (str, resultDice)
         }
         else {
-            print("You do have the -man condition.")
-            return true
+            let str = "You do have the -man suffix."
+            print(str)
+            man = true
+            return (str, resultDice)
         }
     }
     
-    func getCloneCondition() -> Bool {
-        //print(commands[1])
+    mutating func getCloneCondition() -> (String, Int) {
         
         let resultDice = Int.random(in: 1...12)
         if (resultDice < 12){
-            print("You do not have the clone condition.")
-            return false
+            let str = "You are not a clone."
+            print(str)
+            clone = false
+            return (str, resultDice)
         }
         else {
-            print("You have the clone condition. You are a clone of someone else, or you have been brainwashed into becoming a mental doppelganger of someone else. Find someone who has completed this questionnaire and replace 50 percent of your Kojima name with 50 percent of their Kojima name.")
-            return true
+            let str = "You are a clone of someone else, or you have been brainwashed into becoming a mental doppelganger of someone else. Find someone who has completed this questionnaire and replace 50 percent of your Kojima name with 50 percent of their Kojima name."
+            print(str)
+            clone = true
+            return (str, resultDice)
         }
     }
     
-    mutating func getConditionCondition() -> Bool {
-        //print(commands[2])
-        
+    mutating func getConditionCondition() -> (String, Int) {
+
         let resultDice = Int.random(in: 1...8)
         if (resultDice < 6){
-            print("You do not have the condition condition.")
-            return false
+            let str = "You do not have a condition."
+            print(str)
+            condition = false
+            return (str, resultDice)
         }
         else if (resultDice == 6){
+            let str = "You're big. You have the 'Big' condition."
             condition_condition_type = "Big"
-            print("You're big. You have the 'Big' condition.")
-            return true
+            print(str)
+            condition = true
+            return (str, resultDice)
         }
         else if (resultDice == 7){
+            let str = "You are older than you once were. You have the 'Old' condition."
             condition_condition_type = "Old"
-            print("You are older than you once were. You have the 'Old' condition.")
-            return true
+            print(str)
+            condition = true
+            return (str, resultDice)
         }
         else {
+            let str = "You are how you currently are. You have the 'condition' condition."
             condition_condition_type = answers[10]
-            print("You are how you currently are. You have the 'condition' condition.")
-            // you have the \(condition_condition_type) condition
-            return true
+            print(str)
+            condition = true
+            return (str, resultDice)
         }
     }
     
-    func getKojimaCondition() -> Bool {
+    mutating func getKojimaCondition() -> (String, Int) {
+
         let resultDice = Int.random(in: 1...100)
         if (resultDice != 69){
-            return false
+            let str = "You are not Hideo Kojima."
+            print(str)
+            kojima = false
+            return (str, resultDice)
         }
         else{
-            return true
+            let str = "You are Hideo Kojima!!!"
+            print(str)
+            kojima = true
+            return (str, resultDice)
         }
     }
     
     // MARK: - Name Category Methods
     
-    mutating func getNameCategory() {
+    mutating func getNameCategory() -> (String, Int) {
         let resultDice = Int.random(in: 1...20)
         var name_category = ""
         
@@ -160,10 +172,14 @@ struct NameCalculator {
         }
         
         if (subtext != true){
-            print("You have a \(name_category) NAME.")
+            let str = "You have a \(name_category) NAME."
+            print(str)
+            return (str, resultDice)
         }
         else{
-            print("You have a \(name_category).")
+            let str = "You have a \(name_category)."
+            print(str)
+            return (str, resultDice)
         }
     }
     
@@ -179,7 +195,7 @@ struct NameCalculator {
     // MARK: - Normal
     
     func getNormalName(_ man: Bool, _ condition: Bool) -> String {
-        print("Determining your NORMAL NAME...")
+
         var result = answers[0]
         if (man){
             result = result + "man"
@@ -194,7 +210,6 @@ struct NameCalculator {
     
     mutating func getOccupationName(_ man: Bool, _ condition: Bool) -> String {
         last_name = answers[1]
-        print("Determining your OCCUPATION NAME...")
         let resultDice = Int.random(in: 1...4)
         switch (resultDice) {
             case 1:
@@ -222,7 +237,6 @@ struct NameCalculator {
     mutating func getHornyName(_ man: Bool, _ condition: Bool) -> String {
         last_name = answers[2]
         var lick = " "
-        print("Determining your HORNY NAME...")
         let resultDice = Int.random(in: 1...4)
         switch (resultDice) {
             case 1:
@@ -253,7 +267,6 @@ struct NameCalculator {
     
     mutating func getTheName(_ man: Bool, _ condition: Bool) -> String {
         first_name = "The"
-        print("Determining your THE NAME...")
         let resultDice = Int.random(in: 1...4)
         switch (resultDice) {
             case 1:
@@ -280,7 +293,6 @@ struct NameCalculator {
     
     mutating func getCoolName(_ man: Bool, _ condition: Bool) -> String {
         first_name = answers[20]
-        print("Determining your COOL NAME...")
         let resultDice = Int.random(in: 1...6)
         switch (resultDice) {
             case 1:
@@ -313,7 +325,6 @@ struct NameCalculator {
     
     mutating func getViolentName(_ man: Bool, _ condition: Bool) -> String {
         last_name = answers[4]
-        print("Determining your VIOLENT NAME...")
         let resultDice = Int.random(in: 1...4)
         switch (resultDice) {
             case 1:
@@ -339,7 +350,6 @@ struct NameCalculator {
     // MARK: - Subtext
     
     mutating func getSubtextName(_ man: Bool, _ condition: Bool) -> String {
-        print("Determining your NAME THAT LACKS SUBEXT...")
         var result = answers[9]
         if (man){ result = result + "man"
         }
